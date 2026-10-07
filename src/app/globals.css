@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream-bg: #F4F0E8;
+  --color-cream-surface: #FFFFFF;
+  --color-cream-border: #E2DDD1;
+  --color-cream-subtle: #ECE7DC;
+
+  --color-navy: #0B1F3A;
+  --color-navy-dark: #09111C;
+  --color-navy-light: #162E50;
+  
+  --color-gold: #B8860B;
+  --color-gold-hover: #9E7208;
+  --color-gold-light: #FAF5E8;
+  --color-gold-muted: #D6A84F;
+  
+  --color-charcoal: #111D2A;
+  --color-muted-text: #57595E;
+
+  --font-space-grotesk: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  --font-inter: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-ibm-plex-mono: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
+
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+:root {
+  --bg-color: #F4F0E8;
+  --text-color: #111D2A;
+  --font-space-grotesk: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  --font-inter: var(--font-inter), "Inter", sans-serif;
+  --font-ibm-plex-mono: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-inter), "Inter", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono-code {
+  font-family: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ECE7DC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CFC7B7;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8AE9C;
+}
