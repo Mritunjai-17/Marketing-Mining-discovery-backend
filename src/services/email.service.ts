@@ -130,10 +130,18 @@ export class EmailService {
     };
 
     // Run both email dispatches concurrently without blocking each other
-    await Promise.allSettled([
+    const results = await Promise.allSettled([
       this.sendClientThankYou(clientData),
       this.sendAdminAlert(adminData),
     ]);
+
+    const [clientResult, adminResult] = results;
+    if (clientResult.status === 'fulfilled' && !clientResult.value.success) {
+      console.error('[EmailService] Client Thank-You failed:', clientResult.value.error);
+    }
+    if (adminResult.status === 'fulfilled' && !adminResult.value.success) {
+      console.error('[EmailService] Admin Alert failed:', adminResult.value.error);
+    }
   }
 }
 

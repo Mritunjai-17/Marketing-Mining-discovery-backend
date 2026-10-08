@@ -68,17 +68,19 @@ export class ContactService {
     });
 
     // Trigger Resend email notifications (Thank-you to client + Alert to admin)
-    // Dispatched asynchronously in background so client response is instant
-    emailService.sendContactEmails({
-      id: created._id.toString(),
-      name: created.name,
-      email: created.email,
-      phone: created.phone,
-      message: created.message,
-      createdAt: created.createdAt,
-    }).catch((err) => {
-      console.error('[ContactService] Background email dispatch failed:', err);
-    });
+    // Awaited with try/catch to ensure Vercel serverless functions complete before termination
+    try {
+      await emailService.sendContactEmails({
+        id: created._id.toString(),
+        name: created.name,
+        email: created.email,
+        phone: created.phone,
+        message: created.message,
+        createdAt: created.createdAt,
+      });
+    } catch (err) {
+      console.error('[ContactService] Email dispatch failed:', err);
+    }
 
     return created;
   }
