@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<title>New Client Enquiry Received</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; padding:0; background:#ffffff; -webkit-text-size-adjust:100%; }
+  table { border-collapse:collapse; }
+  a { text-decoration:none; }
+  @media only screen and (max-width:927px) {
+    .container { width:100% !important; }
+    .px { padding-left:20px !important; padding-right:20px !important; }
+    .card-px { padding-left:22px !important; padding-right:22px !important; }
+    .label { width:120px !important; font-size:16px !important; }
+    .divider { width:16px !important; }
+    .value { font-size:16px !important; word-break:break-word; }
+    .stack { display:block !important; width:100% !important; }
+    .stack-right { text-align:left !important; padding-top:24px !important; }
+  }
+</style>
+</head>
+<body>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;">
+<tr>
+<td align="center">
+
+  <table role="presentation" class="container" width="927" cellpadding="0" cellspacing="0" border="0" style="width:927px; max-width:927px;">
+
+    <!-- ===================== HEADER ===================== -->
+    <tr>
+      <td class="px" bgcolor="#343b49" style="background:#343b49; height:96px; padding:0 66px;">
+        <img src="images/logo.png" width="175" alt="Mining Discovery" style="display:block; width:175px; max-width:100%; height:auto; border:0; outline:none;">
+      </td>
+    </tr>
+    <!-- header shadow -->
+    <tr>
+      <td height="8" bgcolor="#d9d6ce" style="height:8px; font-size:0; line-height:0; background:#d9d6ce; background-image:linear-gradient(180deg,#b9b6af 0%,#d9d6ce 100%);">&nbsp;</td>
+    </tr>
+
+    <!-- ===================== BODY ===================== -->
+    <tr>
+      <td class="px" bgcolor="#d9d6ce" style="background:#d9d6ce; padding:28px 66px 40px 66px; font-family:Calibri, Carlito, 'Segoe UI', Arial, sans-serif; color:#4a4a46;">
+
+        <p style="margin:0 0 12px 0; font-size:20px; line-height:28px; font-weight:700; color:#4a4a46;">New Client Enquiry Received</p>
+        <p style="margin:0 0 28px 0; font-size:19px; line-height:28px; color:#4a4a46;">A new enquiry has been submitted through the Mining Discovery website.</p>
+
+        <!-- Client details card -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="card-px" bgcolor="#1a1410" style="background:#1a1410; background-image:radial-gradient(ellipse at 50% 50%, #2e231a 0%, #1c1510 55%, #150f0b 100%); border-radius:34px; padding:30px 42px 20px 42px;">
+
+              <p style="margin:0 0 24px 0; font-family:Calibri, Carlito, 'Segoe UI', Arial, sans-serif; font-size:27px; line-height:38px; font-weight:700; color:#f3eee4;">Client Details</p>
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family:Calibri, Carlito, 'Segoe UI', Arial, sans-serif;">
+                <tr>
+                  <td class="label" width="213" valign="middle" style="width:213px; height:55px; border-bottom:1px solid #4d3e25; font-size:20px; line-height:26px; font-weight:700; color:#f3eee4;">Full Name</td>
+                  <td class="divider" width="34" valign="middle" style="width:34px; border-bottom:1px solid #4d3e25;"><div style="width:1px; height:24px; background:#6b5832; font-size:0; line-height:0;">&nbsp;</div></td>
+                  <td class="value" valign="middle" style="border-bottom:1px solid #4d3e25; font-size:19px; line-height:26px; color:#f3eee4;">{{name}}</td>
+                </tr>
+                <tr>
+                  <td class="label" width="213" valign="middle" style="width:213px; height:55px; border-bottom:1px solid #4d3e25; font-size:20px; line-height:26px; font-weight:700; color:#f3eee4;">Company Name</td>
+                  <td class="divider" width="34" valign="middle" style="width:34px; border-bottom:1px solid #4d3e25;"><div style="width:1px; height:24px; background:#6b5832; font-size:0; line-height:0;">&nbsp;</div></td>
+                  <td class="value" valign="middle" style="border-bottom:1px solid #4d3e25; font-size:19px; line-height:26px; color:#f3eee4;">{{company_name}}</td>
+                </tr>
+                <tr>
+                  <td class="label" width="213" valign="middle" style="width:213px; height:55px; border-bottom:1px solid #4d3e25; font-size:20px; line-height:26px; font-weight:700; color:#f3eee4;">Email Address</td>
+                  <td class="divider" width="34" valign="middle" style="width:34px; border-bottom:1px solid #4d3e25;"><div style="width:1px; height:24px; background:#6b5832; font-size:0; line-height:0;">&nbsp;</div></td>
+                  <td class="value" valign="middle" style="border-bottom:1px solid #4d3e25; font-size:19px; line-height:26px; color:#f3eee4;">{{email}}</td>
+                </tr>
+                <tr>
+                  <td class="label" width="213" valign="middle" style="width:213px; height:55px; border-bottom:1px solid #4d3e25; font-size:20px; line-height:26px; font-weight:700; color:#f3eee4;">Phone Number</td>
+                  <td class="divider" width="34" valign="middle" style="width:34px; border-bottom:1px solid #4d3e25;"><div style="width:1px; height:24px; background:#6b5832; font-size:0; line-height:0;">&nbsp;</div></td>
+                  <td class="value" valign="middle" style="border-bottom:1px solid #4d3e25; font-size:19px; line-height:26px; color:#f3eee4;">{{phone}}</td>
+                </tr>
+                <tr>
+                  <td class="label" width="213" valign="middle" style="width:213px; height:55px; border-bottom:1px solid #4d3e25; font-size:20px; line-height:26px; font-weight:700; color:#f3eee4;">Service Interested In</td>
+                  <td class="divider" width="34" valign="middle" style="width:34px; border-bottom:1px solid #4d3e25;"><div style="width:1px; height:24px; background:#6b5832; font-size:0; line-height:0;">&nbsp;</div></td>
+                  <td class="value" valign="middle" style="border-bottom:1px solid #4d3e25; font-size:19px; line-height:26px; color:#f3eee4;">{{service}}</td>
+                </tr>
+                <tr>
+                  <td class="label" width="213" valign="middle" style="width:213px; height:55px;  font-size:20px; line-height:26px; font-weight:700; color:#f3eee4;">Submission Date</td>
+                  <td class="divider" width="34" valign="middle" style="width:34px; "><div style="width:1px; height:24px; background:#6b5832; font-size:0; line-height:0;">&nbsp;</div></td>
+                  <td class="value" valign="middle" style=" font-size:19px; line-height:26px; color:#f3eee4;">{{submission_date}}</td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+        </table>
+
+        <!-- Client message -->
+        <p style="margin:30px 0 30px 0; font-size:19px; line-height:28px; font-weight:700; color:#5c5c57;">Client Message</p>
+        <p style="margin:0 0 26px 0; font-size:19px; line-height:26px; color:#4a4a46;">{{message}}</p>
+
+        <p style="margin:0 0 26px 0; font-size:19px; line-height:26px; color:#4a4a46;"><strong style="font-weight:700;">Next Step:</strong> Review the enquiry and contact the prospective client to discuss their requirements.</p>
+
+        <p style="margin:0; font-size:19px; line-height:26px; color:#4a4a46;"><strong style="font-weight:700;">Mining Discovery</strong><br>Website Enquiry Notification</p>
+
+      </td>
+    </tr>
+
+    <!-- ===================== FOOTER ===================== -->
+    <tr>
+      <td class="px" bgcolor="#0a0d0b" style="background:#0a0d0b; padding:43px 66px 0 66px;">
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="stack" width="60%" valign="top">
+              <img src="images/logo.png" width="195" alt="Mining Discovery" style="display:block; width:195px; max-width:100%; height:auto; border:0; outline:none;">
+              <p style="margin:26px 0 0 0; width:312px; max-width:100%; font-family:Inter, Arial, Helvetica, sans-serif; font-size:13px; line-height:16.5px; color:#bdbdb5;">
+                Mining Discovery is your trusted source for in-depth mining news, executive profiles, company insights, and industry analysis &mdash; connecting the global mining community with the stories that matter.
+              </p>
+            </td>
+
+            <td class="stack stack-right" width="40%" valign="top" align="right">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right">
+                <tr>
+                  <td colspan="3" align="center" style="padding:30px 0 0 0; font-family:Inter, Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; color:#c9a24a;">Follow Us</td>
+                </tr>
+                <tr><td colspan="3" height="26" style="height:26px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                <tr>
+                  <!-- Replace # with each social profile URL -->
+                  <td style="padding-right:22px;"><a href="#" target="_blank" style="display:block; width:38px; height:38px; border:1px solid #8a8a84; border-radius:50%; text-align:center; line-height:38px; font-family:Georgia, serif; font-size:20px; color:#bdbdb5;">f</a></td>
+                  <td style="padding-right:22px;"><a href="#" target="_blank" style="display:block; width:38px; height:38px; border:1px solid #8a8a84; border-radius:50%; text-align:center; line-height:38px; font-family:Arial, sans-serif; font-size:19px; color:#bdbdb5;">&#120143;</a></td>
+                  <td><a href="#" target="_blank" style="display:block; width:38px; height:38px; border:1px solid #8a8a84; border-radius:50%; text-align:center; line-height:38px; font-family:Arial, sans-serif; font-size:17px; color:#bdbdb5;">&#9678;</a></td>
+                </tr>
+                <tr><td colspan="3" height="22" style="height:22px; font-size:0; line-height:0;">&nbsp;</td></tr>
+                <tr>
+                  <td style="padding-right:22px;"><a href="#" target="_blank" style="display:block; width:38px; height:38px; border:1px solid #8a8a84; border-radius:50%; text-align:center; line-height:38px; font-family:Arial, sans-serif; font-size:15px; font-weight:700; color:#bdbdb5;">in</a></td>
+                  <td style="padding-right:22px;"><a href="#" target="_blank" style="display:block; width:38px; height:38px; border:1px solid #8a8a84; border-radius:50%; text-align:center; line-height:38px; font-family:Arial, sans-serif; font-size:14px; color:#bdbdb5;">&#9654;</a></td>
+                  <td><a href="#" target="_blank" style="display:block; width:38px; height:38px; border:1px solid #8a8a84; border-radius:50%; text-align:center; line-height:38px; font-family:Arial, sans-serif; font-size:16px; color:#bdbdb5;">&#9873;</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:20px;">
+          <tr><td height="1" style="height:1px; font-size:0; line-height:0; background:#3a3d3a; border-top:1px solid #3a3d3a;">&nbsp;</td></tr>
+        </table>
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td valign="middle" style="padding:20px 0 21px 0; font-family:Inter, Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; color:#bdbdb5;">
+              &copy; 2026 Mining Discovery. All Rights Reserved.
+            </td>
+            <td valign="middle" align="right" style="padding:20px 0 21px 0; font-family:Inter, Arial, Helvetica, sans-serif; font-size:13px; line-height:18px;">
+              <a href="#" target="_blank" style="color:#bdbdb5; text-decoration:underline;">Privacy Policy</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#" target="_blank" style="color:#bdbdb5; text-decoration:underline;">Terms of Use</a>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+
+  </table>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

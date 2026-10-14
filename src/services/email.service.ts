@@ -12,35 +12,39 @@ export interface ContactEmailPayload {
 }
 
 export class EmailService {
-  private resend: Resend | null = null;
-  private fromEmail: string;
-  private adminEmail: string;
-  private appUrl: string;
-
-  constructor() {
+  private getResend(): Resend | null {
     const apiKey = process.env.RESEND_API_KEY;
-    if (apiKey) {
-      this.resend = new Resend(apiKey);
-    } else {
+    if (!apiKey) {
       console.warn('[EmailService] WARNING: RESEND_API_KEY is not set. Emails will not be sent.');
+      return null;
     }
+    return new Resend(apiKey);
+  }
 
-    this.fromEmail = process.env.RESEND_FROM_EMAIL || 'Mining Discovery <onboarding@resend.dev>';
-    this.adminEmail = process.env.ADMIN_NOTIFICATION_EMAIL || 'midisofficial@gmail.com';
-    this.appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+  private get fromEmail(): string {
+    return process.env.RESEND_FROM_EMAIL || 'Mining Discovery <onboarding@resend.dev>';
+  }
+
+  private get adminEmail(): string {
+    return process.env.ADMIN_NOTIFICATION_EMAIL || 'midisofficial@gmail.com';
+  }
+
+  private get appUrl(): string {
+    return process.env.NEXT_PUBLIC_APP_URL || process.env.FRONTEND_URL || 'http://localhost:3000';
   }
 
   /**
    * Send a Thank-You confirmation email to the client who submitted the form
    */
   async sendClientThankYou(data: ClientThankYouData): Promise<{ success: boolean; id?: string; error?: string }> {
-    if (!this.resend) {
+    const resend = this.getResend();
+    if (!resend) {
       return { success: false, error: 'Resend API key missing' };
     }
 
     try {
       const html = renderClientThankYouHtml(data);
-      const res = await this.resend.emails.send({
+      const res = await resend.emails.send({
         from: this.fromEmail,
         to: [data.email],
         subject: 'Thank You for Contacting Mining Discovery',
@@ -65,7 +69,8 @@ export class EmailService {
    * Send an instant alert email to the Admin notification address
    */
   async sendAdminAlert(data: AdminNotificationData): Promise<{ success: boolean; id?: string; error?: string }> {
-    if (!this.resend) {
+    const resend = this.getResend();
+    if (!resend) {
       return { success: false, error: 'Resend API key missing' };
     }
 
@@ -75,7 +80,7 @@ export class EmailService {
         portalUrl: `${this.appUrl}/admin`,
       });
 
-      const res = await this.resend.emails.send({
+      const res = await resend.emails.send({
         from: this.fromEmail,
         to: [this.adminEmail],
         subject: `New Lead Alert: ${data.name} via Mining Discovery Form`,
